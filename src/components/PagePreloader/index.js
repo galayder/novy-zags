@@ -1,6 +1,10 @@
 import React from "react";
-import { preloader } from "./preloader.module.css";
+import { Preloader, PreloaderInner } from "./preloader.module.css";
 
 export const PagePreloader = () => {
-  return <div className={preloader}>PRELOADER</div>;
+  return (
+    <div className={Preloader}>
+      <div className={PreloaderInner}>NZ</div>
+    </div>
+  );
 };
