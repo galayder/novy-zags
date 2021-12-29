@@ -6,6 +6,11 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-postcss",
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-react-helmet",
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-source-datocms",
       options: {
@@ -13,10 +18,14 @@ module.exports = {
         environment: process.env.DATO_ENVIRONMENT,
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-react-helmet",
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Open Sans\:300,400,500,700,800`, // you can also specify font weights and styles
+        ],
+        display: "swap",
+      },
+    },
   ],
 };
